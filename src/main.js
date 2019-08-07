@@ -8,7 +8,7 @@ router.afterEach((to, from) => {
 
 import VueResourse from 'vue-resource';
 Vue.use(VueResourse); 
-Vue.http.options.root = "http://www.liulongbin.top:3005/";
+Vue.http.options.root = "https://bird.ioliu.cn/v2?url=http://www.liulongbin.top:3005/";
 Vue.http.options.emulateJSON = true;
 
 import Vuex from 'vuex';
