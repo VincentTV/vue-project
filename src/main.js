@@ -11,8 +11,9 @@ Vue.use(VueResourse);
 Vue.http.options.root = "https://bird.ioliu.cn/v2?url=http://www.liulongbin.top:3005/";
 Vue.http.options.emulateJSON = true;
 
-import Vuex from 'vuex';
-Vue.use(Vuex);
+// 优化：以通过 cdn 引入
+// import Vuex from 'vuex';
+// Vue.use(Vuex);
 
 // UI
 // import { Header, Tabbar, TabItem } from "mint-ui";
@@ -27,12 +28,12 @@ import MintUI from "mint-ui";
 import "mint-ui/lib/style.css";
 Vue.use(MintUI);
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+// Vue.use(ElementUI);
 
+// 图片预览
 import VuePreview from "vue-preview";
-// Vue.use(VuePreview);
 Vue.use(VuePreview, {
   mainClass: "pswp--minimal--dark",
   barsSize: { top: 0, bottom: 0 },
@@ -48,8 +49,8 @@ Vue.use(VuePreview, {
 import app from './App.vue';
 import router from './router';
 
-// lib
-import './lib/fontawsome/css/all.min.css';
+// lib 优化 cdn引入
+// import './lib/fontawsome/css/all.min.css';
 
 // 过滤器
 // 时间处理插件，npm i -S moment
@@ -59,6 +60,7 @@ Vue.filter('dateFormat', (dateStr, type = 'YYYY-MM-DD hh:mm:ss') => {
   // 调用moment
   return moment(dateStr).format(type);
 })
+
 
 // 创建 Vuex 仓库
 const store = new Vuex.Store({

@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- Header -->
-    <mt-header fixed title="Header">
+    <mt-header fixed title="@Vincent">
       <span slot="left" v-show="!isHome" @click="goBack">
         <mt-button icon="back">返回</mt-button>
       </span>

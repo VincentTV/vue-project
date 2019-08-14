@@ -21,7 +21,7 @@ module.exports = {
       test: new RegExp(
         "\\.(js|css)$" //压缩 js 与 css
       ),
-      threshold: 10240, //只处理比这个值大的资源。按字节计算
+      threshold: 512, //只处理比这个值大的资源。按字节计算
       minRatio: 0.8 //只有压缩率比这个值小的资源才会被处理
     })
   ],
@@ -37,5 +37,12 @@ module.exports = {
       { test: /\.js$/, use: "babel-loader", exclude: /node_modules/ },
       { test: /\.vue$/, use: "vue-loader" }
     ]
+  },
+  externals: {
+    "vue": "Vue",
+    "vue-router": "VueRouter",
+    "vue-resource": "VueResource",
+    "vuex": "Vuex",
+    "element-ui": "ELEMENT"
   }
 };
